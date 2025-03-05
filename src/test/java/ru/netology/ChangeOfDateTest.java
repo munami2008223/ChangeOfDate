@@ -55,7 +55,7 @@ class ChangeOfDateTest {
         $("[data-test-id='replan-notification'] button").click();
         $("[data-test-id='success-notification'] .notification__content")
                 .shouldBe(visible)
-                .shouldHave(text("Встреча не запланирована на  " + secondMeetingDate));
+                .shouldHave(text("Встреча успешно запланирована на  " + secondMeetingDate));
     }
 
 
