@@ -18,31 +18,12 @@ import java.time.Duration;
 
 
 class ChangeOfDateTest {
+
+
     @BeforeEach
-    void setUp() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--headless");
-        //driver = new ChromeDriver(options);
-      //  driver.get("http://localhost:9999");
+    void setup() {
+        open("http://localhost:9999");
     }
-
-    @BeforeAll
-    public static void setupAll() {
-        WebDriverManager.chromedriver().setup();
-    }
-
-    @AfterEach
-    void tearDown() {
-        driver.quit();
-        driver = null;
-    }
-
-    //  @BeforeEach
-  //  void setup() {
-   //     open("http://localhost:9999");
-  //  }
 
     @Test
     @DisplayName("Should successful plan and replan meeting")
