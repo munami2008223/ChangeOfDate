@@ -1,6 +1,6 @@
 package ru.netology;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -9,20 +9,40 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import ru.netology.data.DataGenerator;
 
 import java.time.Duration;
 
 
 class ChangeOfDateTest {
-
     @BeforeEach
-    void setup() {
-        open("http://localhost:9999");
+    void setUp() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        //driver = new ChromeDriver(options);
+      //  driver.get("http://localhost:9999");
     }
+
+    @BeforeAll
+    public static void setupAll() {
+        WebDriverManager.chromedriver().setup();
+    }
+
+    @AfterEach
+    void tearDown() {
+        driver.quit();
+        driver = null;
+    }
+
+    //  @BeforeEach
+  //  void setup() {
+   //     open("http://localhost:9999");
+  //  }
 
     @Test
     @DisplayName("Should successful plan and replan meeting")
