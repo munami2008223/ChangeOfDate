@@ -1,4 +1,4 @@
-package ru.netology.data;
+package ru.netology.test.data;
 
 import com.github.javafaker.Faker;
 import lombok.Value;
@@ -39,24 +39,13 @@ public class DataGenerator {
             UserInfo userInfo = new UserInfo(generateCity(locale), generateName(locale), generatePhone(locale));
             return userInfo;
         }
-    }
 
-    @Value
-    public static class UserInfo {
-        String city;
-        String name;
-        String phone;
-
-        public String getCity() {
-            return city;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public String getPhone() {
-            return phone;
+        @Value
+        public static class UserInfo {
+            String city;
+            String name;
+            String phone;
         }
     }
+
 }

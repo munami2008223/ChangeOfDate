@@ -1,4 +1,4 @@
-package ru.netology;
+package ru.netology.test.test;
 
 import org.junit.jupiter.api.*;
 
@@ -10,9 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import ru.netology.data.DataGenerator;
+import ru.netology.test.data.DataGenerator;
 
 import java.time.Duration;
 
