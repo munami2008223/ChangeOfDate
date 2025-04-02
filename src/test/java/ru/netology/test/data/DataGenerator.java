@@ -31,21 +31,26 @@ public class DataGenerator {
         return faker.phoneNumber().phoneNumber();
     }
 
+    public static String generateWrongPhone(String locale) {
+        var faker = new Faker(new Locale(locale));
+        return faker.numerify("#####");
+    }
+
     public static class Registration {
         private Registration() {
         }
 
         public static UserInfo generateUser(String locale) {
-            UserInfo userInfo = new UserInfo(generateCity(locale), generateName(locale), generatePhone(locale));
-            return userInfo;
-        }
+            return new UserInfo(generateCity(locale), generateName(locale), generatePhone(locale));
 
-        @Value
-        public static class UserInfo {
-            String city;
-            String name;
-            String phone;
         }
     }
 
+    @Value
+    public static class UserInfo {
+        String city;
+        String name;
+        String phone;
+    }
 }
+
