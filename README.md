@@ -1,1 +1,1 @@
-[![Java CI with Gradle](https://github.com/munami2008223/ChangeOfDate/actions/workflows/gradle.yml/badge.svg)](https://github.com/munami2008223/ChangeOfDate/actions/workflows/gradle.yml)
+[![Java CI with Gradle](https://github.com/munami2008223/ChangeOfDate/actions/workflows/gradle.yml/badge.svg)](https://github.com/munami2008223/ChangeOfDate/actions/workflows/gradle.yml)![Screenshot_1](https://github.com/user-attachments/assets/71bebb60-d957-4a78-b098-a469b2708745)
